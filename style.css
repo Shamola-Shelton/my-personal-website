@@ -9,11 +9,13 @@
   --caption-color: #cccccc;
   --table-bg: #1a1a1a;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 /* General Body Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -49,10 +51,10 @@ h3 {
 /* Greeting Message */
 .greeting {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--accent-color);
   margin: 1rem 0;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 /* Sections */
@@ -91,14 +93,14 @@ section {
   font-size: 0.9rem;
   color: var(--caption-color);
   margin-top: 0.5rem;
-  font-style: italic;
+  font-style: normal;
 }
 
+/* Links */
 a {
   color: var(--accent-color);
   text-decoration: none;
-  display: block;
-  margin-bottom: 0.5rem;
+  display: inline;
 }
 
 a:hover {
@@ -137,6 +139,16 @@ a:hover {
 }
 
 .music-table td {
+  color: var(--text-color);
+}
+
+/* Projects List */
+#projects ul li {
+  margin-bottom: 1rem;
+}
+
+#projects ul li p {
+  margin-top: 0.5rem;
   color: var(--text-color);
 }
 
