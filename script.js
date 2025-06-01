@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     hobbies.forEach(hobby => console.log(`- ${hobby}`));
   }
   listHobbies();
-
   // Personal info object and greet function
   const me = {
     name: "Shelton Shamola",

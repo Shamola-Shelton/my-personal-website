@@ -9,13 +9,11 @@
   --caption-color: #cccccc;
   --table-bg: #1a1a1a;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 /* General Body Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
