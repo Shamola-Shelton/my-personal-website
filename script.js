@@ -1,85 +1,51 @@
-// Wait for the DOM to be ready
 document.addEventListener("DOMContentLoaded", () => {
-  // === Variables ===
-  const fadeInElements = document.querySelectorAll(".fade-in");
+  const buttonContainer = document.getElementById("button-container");
+  const greetingMessage = document.getElementById("greeting-message");
+  const body = document.body;
+  const images = document.querySelectorAll('.image-content img');
 
-  // === Function to make elements fade in when visible ===
-  function fadeInOnScroll() {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    }, {
-      threshold: 0.1,
-    });
+  // Array of background colors
+  const colors = ['#121212', '#222222', '#333333', '#797d7f', '#444444', '#4d5656', '#555555'];
+  let currentColorIndex = 0;
 
-    fadeInElements.forEach(el => observer.observe(el));
+  // Create button
+  const changeBgBtn = document.createElement("button");
+  changeBgBtn.textContent = "Cycle Background Color";
+
+  // Append button to buttonContainer
+  buttonContainer.appendChild(changeBgBtn);
+
+  // Add event listener to cycle through colors
+  changeBgBtn.addEventListener("click", () => {
+    currentColorIndex = (currentColorIndex + 1) % colors.length;
+    body.style.backgroundColor = colors[currentColorIndex];
+    console.log(`Background color changed to ${colors[currentColorIndex]}`);
+  });
+
+  // Fade in images
+  setTimeout(() => {
+    images.forEach(img => img.classList.add('visible'));
+  }, 100);
+
+  // Hobbies array and function
+  const hobbies = ["Learning to code", "Music", "Football", "Going out with friends"];
+  function listHobbies() {
+    console.log("My passions include:");
+    hobbies.forEach(hobby => console.log(`- ${hobby}`));
   }
+  listHobbies();
 
-  // === Call the function ===
-  fadeInOnScroll();
-
-  // === DOM Manipulation ===
-  const contactSection = document.querySelector("#contact");
-  const newNote = document.createElement("p");
-  newNote.textContent = "Feel free to reach out for collaborations or questions!";
-  contactSection.appendChild(newNote);
-
-  // === Arrays ===
-  const hobbies = ["Coding", "Music", "Football", "Design", "Hanging out"];
-
-  // === Repetition with for loop ===
-  const aboutSection = document.querySelector("#about .text-content");
-  const hobbyList = document.createElement("ul");
-
-  for (let i = 0; i < hobbies.length; i++) {
-    const li = document.createElement("li");
-    li.textContent = hobbies[i];
-    hobbyList.appendChild(li);
-  }
-
-  aboutSection.appendChild(hobbyList);
-
-  // === Objects ===
-  const user = {
-    name: "Shelton",
-    age: 26,
-    isDeveloper: true,
-    favoriteArtist: "J. Cole",
-    favoriteTeam: "Manchester United",
+  // Personal info object and greet function
+  const me = {
+    name: "Shelton Shamola",
+    gender: "Male"
   };
-
-  // === Conditionals + Logical Operators ===
-  if (user.isDeveloper && user.age > 18) {
-    const devMsg = document.createElement("p");
-    devMsg.textContent = `${user.name} is a passionate developer who supports ${user.favoriteTeam}.`;
-    aboutSection.appendChild(devMsg);
-  }
-
-  // === Function to toggle contact section visibility ===
-  function toggleContact() {
-    if (contactSection.style.display === "none") {
-      contactSection.style.display = "block";
+  function greet() {
+    if (me.gender === "Male") {
+      greetingMessage.textContent = `Hey there, my name is ${me.name}! Keep coding and learning!`;
     } else {
-      contactSection.style.display = "none";
+      greetingMessage.textContent = `Hey there, I am ${me.name}! Keep coding and learning!`;
     }
   }
-
-  // === Add a button to test function ===
-  const toggleBtn = document.createElement("button");
-  toggleBtn.textContent = "Toggle Contact Info";
-  toggleBtn.style.marginTop = "1rem";
-  toggleBtn.style.padding = "0.5rem 1rem";
-  toggleBtn.style.backgroundColor = "#555";
-  toggleBtn.style.color = "white";
-  toggleBtn.style.border = "none";
-  toggleBtn.style.borderRadius = "8px";
-  toggleBtn.style.cursor = "pointer";
-
-  // Attach the toggle function
-  toggleBtn.addEventListener("click", toggleContact);
-  contactSection.parentNode.insertBefore(toggleBtn, contactSection);
-
+  greet();
 });

@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <h1>Welcome to Shelton Shamola's World</h1>
+    <h1>Shelton Shamola Juma</h1>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -16,58 +16,115 @@
     </nav>
   </header>
 
+  <!-- Buttons container for JS to place buttons -->
+  <div id="button-container" style="display:flex; gap:10px; padding:1rem; justify-content:center;">
+    <!-- Buttons will be inserted here by JS -->
+  </div>
+
+  <!-- Greeting message container -->
+  <div id="greeting-message" class="greeting"></div>
+
   <main>
-    <section id="about" class="flex-section">
+    <section id="about" class="flex-section fade-in">
       <div class="text-content">
         <h2>About Me</h2>
         <p>
-          Hello there! My name is <strong>Shelton Shamola</strong>, and I was born on December 28th, 1998. I'm a proud Kenyan, a passionate learner, and someone who thrives on creativity, logic, and curiosity. I hold a Bachelor's Degree in <strong>Business Information Technology</strong>, and my journey has been one of discovery, growth, and a pursuit of purpose.
+          I am <strong>Shelton Shamola</strong>, a 26-year-old technology enthusiast from Kenya, born on December 28, 1998. Guided by my Christian faith, I am committed to pursuing purpose, fostering creativity, and advancing my skills in software development. Standing at 5’9” and holding a Bachelor’s degree in <strong>Business Information Technology</strong>, I combine analytical rigor with creative problem-solving to develop meaningful digital solutions.
         </p>
-
         <p>
-          I’m a mix of introvert and extrovert — I cherish quiet moments indoors coding for hours, but I also enjoy occasional adventures, laughter with friends, and creating memories with those I love. I'm deeply grounded in my Christian faith, which serves as my moral compass and gives direction to my life and goals.
+          I am currently enrolled in the Moringa School Bootcamp, an intensive program that is enhancing my proficiency in software development. My journey began with mastering the fundamentals of HTML and CSS, creating structured and visually appealing web pages. I have since progressed to JavaScript, exploring its capabilities to add interactivity and dynamic functionality to websites. I actively utilize resources such as freeCodeCamp, MDN Web Docs, and Stack Overflow to deepen my knowledge, addressing challenges and celebrating milestones as I work toward becoming a skilled software developer.
         </p>
-
         <p>
-          Music is a huge part of my identity. It’s my sanctuary. My playlists are dominated by lyrical genius — <strong>J. Cole</strong>, <strong>Drake</strong>, <strong>Kendrick Lamar</strong>, and the soulful melodies of <strong>Rihanna</strong> and <strong>James Arthur</strong>. These artists have shaped my moods, sparked my ideas, and helped me feel understood.
+          Music plays a significant role in my life, providing inspiration during my studies. Artists such as <strong>J. Cole</strong> and <strong>Kendrick Lamar</strong> offer profound lyrical content that encourages critical thinking, while <strong>Drake</strong> and <strong>Rihanna</strong> provide motivational energy. The emotive music of <strong>James Arthur</strong> helps me maintain focus and emotional balance during complex coding tasks.
         </p>
-
         <p>
-          I also bleed red — not just in biology, but in football. <strong>Manchester United</strong> is my team, and I’ve supported them through thick and thin. Football reminds me of life — it's unpredictable, emotional, and full of passion.
+          I am an avid follower of football and a dedicated supporter of <strong>Manchester United</strong>. The sport has taught me the importance of strategy, teamwork, and resilience—principles I apply to my professional and personal endeavors.
         </p>
-
         <p>
-          But above all, I love coding. There’s something magical about turning a blank screen into something functional and beautiful. Programming gives me the ability to solve problems, build useful things, and express creativity in a logical way. I'm especially interested in web development — bringing ideas to life on the internet, one line of code at a time.
+          My commitment to growth drives me to code daily, learn from setbacks, and refine my skills through practical projects. This website serves as a testament to my dedication to continuous learning and professional development in web development.
         </p>
-
         <p>
-          I spend most of my days in front of a computer, either coding, reading documentation, watching tutorials, or debugging. But life isn’t all semicolons and divs — I have a soft side. I’m currently in a relationship with an amazing woman named <strong>Graca Tae</strong>. She’s supportive, kind, and brings joy into my world. We share laughs, dreams, and a vision of growing together.
+          Beyond technology, I enjoy quality time with my girlfriend, <strong>Graca Tae</strong>, whose support and encouragement are invaluable. Additionally, I am an enthusiast of the television series <strong>Game of Thrones,</strong>, which captivates me with its intricate storytelling and complex characters, offering a welcome respite from my technical pursuits.
         </p>
-
         <p>
-          My ambition is to become a world-class software developer. I believe in continuous learning, consistency, and building meaningful projects. This website is just the beginning of that journey. If you’re here to learn about me, collaborate, or just browse — welcome, and thank you.
+          Thank you for visiting my website. I invite you to explore my projects and connect with me to discuss potential collaborations or opportunities in web development.
         </p>
+        <h3>Technical Skills in Development</h3>
+        <ul class="skills-list">
+          <li>HTML: Structuring web content effectively</li>
+          <li>CSS: Designing visually appealing layouts</li>
+          <li>JavaScript: Implementing interactive features</li>
+          <li>Git: Managing version control for projects</li>
+          <li>Responsive Design: Ensuring compatibility across devices</li>
+        </ul>
+        <h3>Musical Influences</h3>
+        <table class="music-table">
+          <thead>
+            <tr>
+              <th>Artist</th>
+              <th>Influence</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>J. Cole</td>
+              <td>Insightful lyrics that promote analytical thinking</td>
+            </tr>
+            <tr>
+              <td>Kendrick Lamar</td>
+              <td>Complex narratives that inspire creativity</td>
+            </tr>
+            <tr>
+              <td>Drake</td>
+              <td>Dynamic rhythms that enhance productivity</td>
+            </tr>
+            <tr>
+              <td>Rihanna</td>
+              <td>Energetic music that motivates perseverance</td>
+            </tr>
+            <tr>
+              <td>James Arthur</td>
+              <td>Emotional depth that fosters focus</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
-      <div class="image-content">
-        <img src="./Images/mypic.jpg" alt="Shelton Shamola" />
-        <img src="./Images/image1.jpg" alt="Shelton chilling" />
-        <img src="./Images/image2.jpg" alt="Coding moment" />
-        <img src="./Images/image3.jpg" alt="Out with friends" />
-        <img src="./Images/image4.jpg" alt="Football day" />
+      <div class="image-content fade-in">
+        <figure>
+          <img src="./Images/mypic.jpg" alt="Shelton Shamola" />
+          <figcaption>Prepared to advance my web development skills</figcaption>
+        </figure>
+        <figure>
+          <img src="./Images/image1.jpg" alt="Casual photo" />
+          <figcaption>Reflecting on my learning journey</figcaption>
+        </figure>
+        <figure>
+          <img src="./Images/image2.jpg" alt="Coding time" />
+          <figcaption>Focused on developing a new project</figcaption>
+        </figure>
+        <figure>
+          <img src="./Images/image3.jpeg" alt="Out and about" />
+          <figcaption>Exploring new experiences for inspiration</figcaption>
+        </figure>
+        <figure>
+          <img src="./Images/image4.jpeg" alt="Football fan" />
+          <figcaption>Supporting Manchester United with enthusiasm</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="fade-in">
       <h2>My Projects</h2>
+      <p>As part of my educational journey at Moringa School, I have developed several projects to apply my growing technical skills. Below are select examples:</p>
       <ul>
-        <li><a href="https://github.com/Shamola-Shelton/phase-0-html-experiencing-html-lab" target="_blank">HTML Experiencing Lab</a></li>
-        <li><a href="https://github.com/Shamola-Shelton/phase-0-html-document-structure-lab" target="_blank">HTML Document Structure Lab</a></li>
-        <li><a href="https://github.com/Shamola-Shelton/phase-0-completing-assignments-codegrade" target="_blank">CodeGrade Assignment Completion</a></li>
+        <li><a href="https://github.com/Shamola-Shelton/phase-0-html-experiencing-html-lab" target="_blank" rel="noopener">Experiencing HTML</a></li>
+        <li><a href="https://github.com/Shamola-Shelton/phase-0-html-document-structure-lab" target="_blank" rel="noopener">HTML Structure Lab</a></li>
+        <li><a href="https://github.com/Shamola-Shelton/phase-0-completing-assignments-codegrade" target="_blank" rel="noopener">CodeGrade Lab</a></li>
       </ul>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="fade-in" style="margin-bottom: 3rem;">
       <h2>Contact Me</h2>
       <p><strong>Phone:</strong> <a href="tel:+254707605641">+254 707 605 641</a></p>
       <p><strong>Email:</strong> <a href="mailto:shamolashelton@gmail.com">shamolashelton@gmail.com</a></p>
@@ -75,9 +132,9 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Shelton Shamola. All rights reserved.</p>
+    <p>© 2025 Shelton Shamola. Developed with dedication and JavaScript.</p>
   </footer>
 
-  <script src="index.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
